@@ -11,10 +11,7 @@ def newton_rapson(func, x0,exactitud):
         x1 = x0 - func.evalf(subs={x: x0}) / funcder.evalf(subs={x: x0})
         t += 1
         dif = abs(x1-x0)
-    if abs(x1) < 1:
-        x1 = round(x1,10)
-    elif abs(x1) > 1:
-        x1 = round(x1,9)
+    x1 = round(x1,9)
     print("La aproximación para la ecuación {} es {} con {} iteraciones y valor inicial {}".format(func,x1,t,valin))
 
 #%%
