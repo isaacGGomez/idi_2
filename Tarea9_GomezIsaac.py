@@ -38,3 +38,7 @@ para_asignar = [38, 66]
 
 centroides = centroides(df, clases, caracteristicas )
 clase_asignada = asignar(para_asignar,centroides )
+
+print(df)
+print(centroides)
+print(clase_asignada)
