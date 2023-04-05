@@ -10,9 +10,6 @@ img1ArrS = img1Arr.shape
 img1Arr = np.reshape(img1Arr,(img1ArrS[0]*img1ArrS[1],-1))
 img1Arr = np.append(img1Arr,np.zeros((img1Arr.__len__(),1)),axis = 1)
 #%%
-cent = centroides(img1Arr,3,3)
-
-#%%
 img1mean = IM.fromarray(np.uint8(img1ArrB))
 #%%
 img1mean.save('Test.png')
