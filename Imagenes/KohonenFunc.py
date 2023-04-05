@@ -22,7 +22,6 @@ def centroides(df, clases, caracteristicas):
         j +=1
 
     return centroids
-
 def asignar( entrada, centroids ):
     return np.argmin( np.sum( (entrada - centroids) ** 2, axis=1) ) + 1
 
