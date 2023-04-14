@@ -1,61 +1,57 @@
-from pytictoc import TicToc
+##### Importacion de funciones #############
+from Imagenes.FuncionesImagenes import *
 t = TicToc() #create instance of class
-from Imagenes.KohonenFunc import *
-#%%
-img1 = IM.open('imagen1Deutschland-1.jpg')
-img1Arr = np.array(img1)[:,:,:3]
-img1ArrS = img1Arr.shape
-img1Arr = np.reshape(img1Arr,(img1ArrS[0]*img1ArrS[1],-1))
-img1Arr = np.append(img1Arr,np.zeros((img1Arr.__len__(),1)),axis = 1)
-#%%
-t.tic() #Start timer
-centroid = kmeans(img1Arr,3,3)
-t.toc() #Time elapsed since t.tic()
-#%%
-img1Arr = img1Arr.astype(int)
-#%%
-for i in range(len(img1Arr)):
-    img1Arr[i,0] = centroid[img1Arr[i,3]-1,0]
-    img1Arr[i,1] = centroid[img1Arr[i,3]-1,1]
-    img1Arr[i,2] = centroid[img1Arr[i,3]-1,2]
-img1Arr=np.reshape(img1Arr[:,:3],(img1ArrS[0],img1ArrS[1],3))
-#%%
-img1mean = IM.fromarray(np.uint8(img1Arr))
-#%%
-img1mean.save('KmeansTest3.png')
+vectorImg = [2,3,10]
 
+############ Imagenes K Means ###############
 #%%
-img2 = IM.open('imagen2México.jpg')
-t.tic()
-crearimg(img2)
-t.toc()
-#%%
-img3 = IM.open('imagen3Gandhi.jpg')
-t.tic()
-crearimg(img3)
-t.toc()
-#%%
-img4 = IM.open('imagen4Lauterbrunnen.jpg')
-iteration = [26]
-t.tic()
-crearimg(img=img4,vector=iteration)
-t.toc()
-#%%
-#for h in [2,3,10]:
-#    img1Arr = np.array(img1)[:,:,:3]
-#    img1ArrS = img1Arr.shape
-#    img1Arr = np.reshape(img1Arr,(img1ArrS[0]*img1ArrS[1],-1))
-#    img1Arr = np.append(img1Arr,np.zeros((img1Arr.__len__(),1)),axis = 1)
-#    centroid = centroides(img1Arr,h,3)
-#    img1Arr = img1Arr.astype(int)
-#    for i in range(len(img1Arr)):
-#        img1Arr[i,0] = centroid[img1Arr[i,3]-1,0]
-#        img1Arr[i,1] = centroid[img1Arr[i,3]-1,1]
-#        img1Arr[i,2] = centroid[img1Arr[i,3]-1,2]
-#    img1Arr=np.reshape(img1Arr[:,:3],(img1ArrS[0],img1ArrS[1],3))
-#    img1mean = IM.fromarray(np.uint8(img1Arr))
-#    var = 'Test2'+str(h)+'.png'
-#    img1mean.save(var)
+#Kmeans Img 1
+img1Km = IM.open('imagen1Deutschland-1.jpg')
+img1kmvar = 'imagen1KM'
+crearimgKm(img1Km,vectorImg,img1kmvar,0.0001)
 
-#%%
+#%%Imagen
+img2Km = IM.open('imagen2México.jpg')
+img2kmvar = 'imagen2KM'
+crearimgKm(img2Km,vectorImg,img2kmvar,0.0001)
+
+#%% Imagen 3
+img3Km = IM.open('imagen3Gandhi.jpg')
+img3kmvar = 'imagen3KM'
+crearimgKm(img3Km,vectorImg,img3kmvar,0.0001)
+
+#%% Imagen 4
+img4Km = IM.open('imagen4Lauterbrunnen.jpg')
+img4kmvar = 'imagen4KM'
+crearimgKm(img4Km,vectorImg,img4kmvar,0.0001)
+
+############ Imagenes Kohonen ###############
+##Kohonen Img 1
+t.tic()
+img4KH = IM.open('imagen1Deutschland-1.jpg')
+img4kHvar = 'imagen1KH'
+crearimg(img4KH,vectorImg,img4kHvar,1,10)
+t.toc()
+
+##Kohonen Img 2
+t.tic()
+img4KH = IM.open('imagen2México.jpg')
+img4kHvar = 'imagen2KH'
+crearimg(img4KH,vectorImg,img4kHvar,1,7)
+t.toc()
+
+
+##Kohonen Img 3
+t.tic()
+img4KH = IM.open('imagen3Gandhi.jpg')
+img4kHvar = 'imagen3KH'
+crearimg(img4KH,vectorImg,img4kHvar,1,5)
+t.toc()
+
+
+##Kohonen Img 4
+img4KH = IM.open('imagen4Lauterbrunnen.jpg')
+img4kHvar = 'imagen4KH'
+crearimg(img4KH,vectorImg,img4kHvar,1,3)
+
 

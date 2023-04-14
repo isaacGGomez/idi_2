@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f6ac545-d249-44cc-b540-15ace66d2168" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Imagenes/KmeansTestG20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/idi_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/idi_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/ClasificacionImg.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/ClasificacionImg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Imagenes/KohonenFunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Imagenes/KohonenFunc.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2OOkNyF7Kkk4jy2A60Lj06McELc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>
