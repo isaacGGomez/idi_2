@@ -11,7 +11,7 @@ def centroides(df, clases, caracteristicas,tolerancia,error):
     distancias = []
     n_clases = int(clases)
     j = 2
-    if n_clases < 2:
+    if n_clases < 2 or n_clases >32:
         return None
     obs = df.__len__()
     centroids = np.random.random([n_clases, caracteristicas])*(abs(np.min(df[:,:-1], axis = 0)-np.max(df[:,:-1], axis = 0))).T + np.min( df[:,:-1], axis = 0)
@@ -33,7 +33,7 @@ def asignar_a_clase ( entrada, centroides ):
 def kmeans(data, n_clases, n_caracteristicas,tolerance):
     prev_centroides = None
     n_clases = int(n_clases)
-    if n_clases < 2:
+    if n_clases < 2 or n_clases >32:
         return None
     n_obs, _ = data.shape
     centroides = np.random.random([n_clases, n_caracteristicas]) * (abs(np.min(data[:,:-1], axis = 0) - np.max(data[:,:-1], axis = 0))).T + np.min( data[:,:-1], axis = 0)

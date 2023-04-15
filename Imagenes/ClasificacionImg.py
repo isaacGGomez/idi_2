@@ -4,7 +4,7 @@ t = TicToc() #create instance of class
 vectorImg = [2,3,10]
 
 ############ Imagenes K Means ###############
-#%%
+5#%%
 #Kmeans Img 1
 img1Km = IM.open('imagen1Deutschland-1.jpg')
 img1kmvar = 'imagen1KM'
@@ -45,13 +45,15 @@ t.toc()
 t.tic()
 img4KH = IM.open('imagen3Gandhi.jpg')
 img4kHvar = 'imagen3KH'
-crearimg(img4KH,vectorImg,img4kHvar,1,5)
+crearimg(img4KH,vectorImg,img4kHvar,1,3)
 t.toc()
 
 
 ##Kohonen Img 4
+t.tic()
 img4KH = IM.open('imagen4Lauterbrunnen.jpg')
 img4kHvar = 'imagen4KH'
-crearimg(img4KH,vectorImg,img4kHvar,1,3)
+crearimg(img4KH,vectorImg,img4kHvar,1,2)
+t.toc()
 
 
